@@ -1,0 +1,22 @@
+{
+	"schemaVersion": 1,
+	"id": "wooltemples",
+	"version": "1.0.0",
+	"name": "Wool Temples",
+	"description": "Changes the terracotta in desert temples back to wool.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Wool-Temples#readme",
+		"issues": "https://github.com/haykam821/Wool-Temples/issues"
+	},
+	"mixins": [
+		"wooltemples.mixin.json"
+	],
+	"license": "MIT",
+	"icon": "assets/wooltemples/icon.png",
+	"depends": {
+		"fabricloader": ">=0.4.0"
+	}
+}

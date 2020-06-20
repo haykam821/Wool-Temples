@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "wooltemples",
-	"version": "1.0.0",
+	"version": "${version}",
 	"name": "Wool Temples",
 	"description": "Changes the terracotta in desert temples back to wool.",
 	"authors": [

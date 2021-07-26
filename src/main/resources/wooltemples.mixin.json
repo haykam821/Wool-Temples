@@ -2,8 +2,10 @@
 	"required": true,
 	"package": "io.github.haykam821.wooltemples.mixin",
 	"compatibilityLevel": "JAVA_8",
+	"plugin": "io.github.haykam821.wooltemples.mixin.WoolTemplesMixinConfigPlugin",
 	"mixins": [
-		"DesertTempleGeneratorMixin"
+		"DesertTempleGeneratorMixin115",
+		"DesertTempleGeneratorMixin116"
 	],
 	"injectors": {
 		"defaultRequire": 1

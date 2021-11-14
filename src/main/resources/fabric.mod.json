@@ -17,6 +17,6 @@
 	"license": "MIT",
 	"icon": "assets/wooltemples/icon.png",
 	"depends": {
-		"fabricloader": ">=0.4.0"
+		"fabricloader": ">=0.12.0"
 	}
 }

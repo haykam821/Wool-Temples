@@ -9,10 +9,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.structure.DesertTempleGenerator;
 
-@SuppressWarnings("target")
-@Mixin(value = DesertTempleGenerator.class, remap = false)
-public class DesertTempleGeneratorMixin116 {
-	@Redirect(method = "method_14931(Lnet/minecraft/class_5281;Lnet/minecraft/class_5138;Lnet/minecraft/class_2794;Ljava/util/Random;Lnet/minecraft/class_3341;Lnet/minecraft/class_1923;Lnet/minecraft/class_2338;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/class_2248;method_9564()Lnet/minecraft/class_2680;"))
+@Mixin(DesertTempleGenerator.class)
+public class DesertTempleGeneratorMixin118 {
+	@Redirect(method = "generate", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/Block;getDefaultState()Lnet/minecraft/block/BlockState;"))
 	private BlockState replaceTerracotta(Block originalBlock) {
 		return WoolTempleUtil.replaceBlock(originalBlock);
 	}

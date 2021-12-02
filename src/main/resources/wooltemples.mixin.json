@@ -5,7 +5,8 @@
 	"plugin": "io.github.haykam821.wooltemples.mixin.WoolTemplesMixinConfigPlugin",
 	"mixins": [
 		"DesertTempleGeneratorMixin115",
-		"DesertTempleGeneratorMixin116"
+		"DesertTempleGeneratorMixin116",
+		"DesertTempleGeneratorMixin118"
 	],
 	"injectors": {
 		"defaultRequire": 1

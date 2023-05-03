@@ -23,9 +23,11 @@ public class WoolTemplesMixinConfigPlugin implements IMixinConfigPlugin {
 	private static final String MIXIN_CLASS_1_15 = MIXIN_CLASS_PREFIX + "DesertTempleGeneratorMixin115";
 	private static final String MIXIN_CLASS_1_16 = MIXIN_CLASS_PREFIX + "DesertTempleGeneratorMixin116";
 	private static final String MIXIN_CLASS_1_18 = MIXIN_CLASS_PREFIX + "DesertTempleGeneratorMixin118";
+	private static final String MIXIN_CLASS_1_19 = MIXIN_CLASS_PREFIX + "DesertTempleGeneratorMixin119";
 
 	private static final Predicate<Version> IS_1_16 = createVersionCompatibility(">=1.16-alpha.20.13.a");
 	private static final Predicate<Version> IS_1_18 = createVersionCompatibility(">=1.18-alpha.21.38.a");
+	private static final Predicate<Version> IS_1_19 = createVersionCompatibility(">=1.19-alpha.22.14.a");
 
 	@Override
 	public void onLoad(String mixinPackage) {
@@ -44,7 +46,9 @@ public class WoolTemplesMixinConfigPlugin implements IMixinConfigPlugin {
 		} else if (mixinClass.equals(MIXIN_CLASS_1_16)) {
 			return IS_1_16.test(getMinecraftVersion()) && !IS_1_18.test(getMinecraftVersion());
 		} else if (mixinClass.equals(MIXIN_CLASS_1_18)) {
-			return IS_1_18.test(getMinecraftVersion());
+			return IS_1_18.test(getMinecraftVersion()) && !IS_1_19.test(getMinecraftVersion());
+		} else if (mixinClass.equals(MIXIN_CLASS_1_19)) {
+			return IS_1_19.test(getMinecraftVersion());
 		}
 		
 		return true;

@@ -6,7 +6,8 @@
 	"mixins": [
 		"DesertTempleGeneratorMixin115",
 		"DesertTempleGeneratorMixin116",
-		"DesertTempleGeneratorMixin118"
+		"DesertTempleGeneratorMixin118",
+		"DesertTempleGeneratorMixin119"
 	],
 	"injectors": {
 		"defaultRequire": 1

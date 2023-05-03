@@ -1,0 +1,18 @@
+package io.github.haykam821.wooltemples.mixin;
+
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+import io.github.haykam821.wooltemples.WoolTempleUtil;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.structure.DesertTempleGenerator;
+
+@Mixin(DesertTempleGenerator.class)
+public class DesertTempleGeneratorMixin1192 {
+	@Redirect(method = "generateSuspiciousSandRoom", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/Block;getDefaultState()Lnet/minecraft/block/BlockState;"))
+	private BlockState replaceSuspiciousSandRoomTerracotta(Block originalBlock) {
+		return WoolTempleUtil.replaceBlock(originalBlock);
+	}
+}
